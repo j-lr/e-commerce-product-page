@@ -1,0 +1,15 @@
+{
+  "name": "e-commerce-product-page",
+  "version": "1.0.0",
+  "description": "front end mentor project 'e-commerce product page'",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "jlr",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "vitest": "^1.2.2"
+  }
+}
