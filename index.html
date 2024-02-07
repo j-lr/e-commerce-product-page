@@ -14,6 +14,13 @@
 
     <title>Frontend Mentor | E-commerce product page</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link href="./src/output.css" rel="stylesheet" />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -27,19 +34,19 @@
       }
     </style>
   </head>
-  <body class="bg-slate-400 px-[8vw]">
+  <body class="laptop:px-[4vw] laptop-xl:px-[8vw] bg-slate-500 font-kumbh">
     <div id="header" class="w-full py-8">
       <div class="flex justify-between items-center">
         <div class="flex gap-4 items-center">
           <img
             src="./images/icon-menu.svg"
             alt="menu"
-            class="tablet:hidden w-4 h-[15px]"
+            class="laptop:hidden w-4 h-[15px]"
           />
           <img src="./images/logo.svg" alt="logo" class="w-[138px] h-[22px]" />
         </div>
         <div
-          class="hidden tablet:flex justify-between w-[50%] text-dark-grayish-blue"
+          class="hidden laptop:flex justify-between w-[50%] text-dark-grayish-blue"
         >
           <p>Collections</p>
           <p>Men</p>
@@ -56,19 +63,92 @@
           <img
             src="./images/image-avatar.png"
             alt="user dp"
-            class="size-7 tablet:size-[40px]"
+            class="size-7 laptop:size-[40px]"
           />
         </div>
       </div>
       <div
-        class="w-full h-px bg-divider-color my-8 hidden tablet:block rounded-lg"
+        class="w-full h-px bg-divider-color my-8 hidden laptop:block rounded-lg"
       ></div>
+      <!-- header finish-->
     </div>
 
-    Sneaker Company Fall Limited Edition Sneakers These low-profile sneakers are
-    your perfect casual wear companion. Featuring a durable rubber outer sole,
-    they’ll withstand everything the weather can offer. $125.00 50% $250.00 0
-    Add to cart
+    <div
+      class="flex flex-col laptop:flex-row gap-16 justify-center w-full bg-red-400 laptop:px-[2%]"
+    >
+      <div
+        id="productImages"
+        class="flex flex-col justify-between w-full laptop:w-max bg-indigo-300"
+      >
+        <img
+          id="currentProductImage"
+          src="./images/image-product-1.jpg"
+          alt="product image"
+          class="w-full h-96 rounded-2xl"
+        />
+        <div class="flex gap-4 mt-4">
+          <img
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="product picture"
+            class="laptop:size-[90px] laptop-xl:size-24 rounded-2xl"
+          />
+          <img
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="product picture"
+            class="laptop:size-[90px] laptop-xl:size-24 rounded-2xl"
+          />
+          <img
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="product picture"
+            class="laptop:size-[90px] laptop-xl:size-24 rounded-2xl"
+          />
+          <img
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="product picture"
+            class="laptop:size-[90px] laptop-xl:size-24 rounded-2xl"
+          />
+        </div>
+      </div>
+
+      <div class="w-min bg-red-200 mt-16">
+        <p class="text-orange mb-4 uppercase tracking-wider">Sneaker Company</p>
+
+        <h1 class="text-4xl font-semibold mb-12">
+          Fall Limited Edition Sneakers
+        </h1>
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they'll withstand everything the
+        weather can offer.
+        <div class="flex gap-4 mt-8">
+          <p class="text-2xl font-bold mr-2">$125.00</p>
+          <p
+            class="bg-[rgb(250,240,230)] text-orange font-bold rounded px-1.5 py-px mb-3"
+          >
+            50%
+          </p>
+        </div>
+        <p class="text-grayish-blue line-through">$250.00</p>
+        <div class="flex gap-6 mt-8 py-6">
+          <div
+            class="flex items-center gap-10 w-max px-6 py-4 rounded-md bg-grayish-blue"
+          >
+            <img src="./images/icon-minus.svg" alt="decrease quantity" />
+            <p>0</p>
+            <img src="./images/icon-plus.svg" alt="increase quantity" />
+          </div>
+          <div
+            class="flex flex-row gap-8 items-center px-16 laptop-xl:px-16 bg-orange rounded-lg text-light-grayish-blue text-nowrap"
+          >
+            <img
+              src="./images/icon-cart.svg"
+              alt="add to cart"
+              class="size-4 brightness-0 invert-[.90]"
+            />
+            <p class="">Add to cart</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="attribution">
       Challenge by
