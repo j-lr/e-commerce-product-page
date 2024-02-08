@@ -25,6 +25,7 @@ module.exports = {
       tablet: "900px",
       laptop: "1024px",
       "laptop-xl": "1440px",
+      "laptop-2xl": "1800px",
     },
   },
   plugins: [],
