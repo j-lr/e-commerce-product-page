@@ -7,7 +7,9 @@ export const tailwindBreakpoints = {
   "laptop-2xl": "1800px",
 };
 
-export const content = ["./src/**/*.{html,js}", "./index.html"];
+// export const content = ["./src/**/*.{html,js}", "./index.html", "./index.js"];
+export const content = ["./src/**/*.{html,js}", "./index.*"];
+
 export const theme = {
   fontFamily: {
     kumbh: ["Kumbh Sans", "sans-serif"],
