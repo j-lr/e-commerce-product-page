@@ -34,7 +34,9 @@
       }
     </style>
   </head>
-  <body class="laptop:px-[4vw] laptop-xl:px-[8vw] bg-white font-kumbh">
+  <body
+    class="laptop:px-[4vw] laptop-xl:px-[8vw] bg-white font-kumbh select-none"
+  >
     <div
       id="header"
       class="w-full px-4 py-8 pr-0 tablet-xs:pr-16 tablet:pr-24 laptop-xl:px-32 laptop-2xl:px-64"
@@ -81,14 +83,34 @@
     >
       <div
         id="productImages"
-        class="flex flex-col justify-between w-full tablet:w-max"
+        class="flex flex-col justify-between w-full tablet:w-max max-w-[500px]"
       >
-        <img
-          id="currentProductImage"
-          src="./images/image-product-1.jpg"
-          alt="product image"
-          class="max-w-full h-96 tablet:h-80 rounded-2xl"
-        />
+        <div class="relative inline-block">
+          <img
+            id="currentProductImage"
+            src="./images/image-product-1.jpg"
+            alt="product image"
+            class="w-full h-96 tablet:h-80 rounded-2xl"
+          />
+
+          <button
+            id="previousThumbail"
+            class="tablet:hidden flex justify-center items-center absolute top-1/2 transform -translate-y-1/2 left-4 bg-white text-white p-2 rounded-full cursor-pointer w-12 h-12 opacity-50"
+          >
+            <img
+              src="./images/icon-previous.svg"
+              alt="previous product image"
+            />
+          </button>
+
+          <button
+            id="nextThumbnail"
+            class="tablet:hidden flex justify-center items-center absolute top-1/2 transform -translate-y-1/2 right-4 bg-white text-white p-2 rounded-full cursor-pointer w-12 h-12"
+          >
+            <img src="./images/icon-next.svg" alt="next product image" />
+          </button>
+        </div>
+
         <div
           id="thumbnails"
           class="hidden tablet:flex justify-center gap-2 mt-4"
