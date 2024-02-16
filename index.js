@@ -136,7 +136,8 @@ function manageThumbnailBorderAtClick(clickedThumbnail) {
     thumbnailBorderElement.style.height = `${clickedThumbnail.offsetHeight}px`;
     thumbnailBorderElement.style.position = "absolute";
     thumbnailBorderElement.className =
-      "bg-transparent rounded-xl border-2 border-orange";
+      "bg-transparent border-2 border-orange rounded-lg laptop:rounded-2xl";
+
     document.body.appendChild(thumbnailBorderElement);
   }
   positionThumbnailBorder();
@@ -145,8 +146,10 @@ function manageThumbnailBorderAtClick(clickedThumbnail) {
 function positionThumbnailBorder() {
   if (!clickedThumbnail) return;
   const rect = clickedThumbnail.getBoundingClientRect();
-  thumbnailBorderElement.style.left = `${rect.left}px`;
-  thumbnailBorderElement.style.top = `${rect.top}px`;
+  thumbnailBorderElement.style.width = `${clickedThumbnail.offsetWidth}px`;
+  thumbnailBorderElement.style.height = `${clickedThumbnail.offsetHeight}px`;
+  thumbnailBorderElement.style.left = `${rect.left + window.scrollX}px`;
+  thumbnailBorderElement.style.top = `${rect.top + window.scrollY}px`;
 }
 
 function manageThumbnailBorderWithWindowSizeChange() {
